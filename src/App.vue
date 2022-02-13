@@ -1,10 +1,14 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <LifeCycle msg="Welcome to Your Vue.js App"/>
+  <!-- <LifeCycle msg="Welcome to Your Vue.js App"/> -->
+  <Vmodel msg="Welcome to Your Vue.js App"/>
+
 </template>
 
 <script setup>
-import LifeCycle from './components/LifeCycle.vue'
+// import LifeCycle from './components/LifeCycle.vue'
+import Vmodel from './components/Vmodel.vue'
+
 </script>
 
 <style>
