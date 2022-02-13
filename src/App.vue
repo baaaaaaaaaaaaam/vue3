@@ -4,7 +4,8 @@
   <!-- <Vmodel msg="Welcome to Your Vue.js App"/> -->
   <!-- <Reactive msg="Welcome to Your Vue.js App"/> -->
   <!-- <Computed msg="Welcome to Your Vue.js App"/> -->
-  <Watch msg="Welcome to Your Vue.js App"/>
+  <!-- <Watch msg="Welcome to Your Vue.js App"/> -->
+  <Props msg="Welcome to Your Vue.js App" :data="[1,2,3]"/>
 
 </template>
 
@@ -13,7 +14,8 @@
 // import Vmodel from './components/Vmodel.vue'
 // import Reactive from './components/Reactive.vue'
 // import Computed from './components/Computed.vue'
-import Watch from './components/Watch.vue'
+// import Watch from './components/Watch.vue'
+import Props from './components/Props.vue'
 </script>
 
 <style>
