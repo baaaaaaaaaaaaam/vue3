@@ -5,7 +5,8 @@
   <!-- <Reactive msg="Welcome to Your Vue.js App"/> -->
   <!-- <Computed msg="Welcome to Your Vue.js App"/> -->
   <!-- <Watch msg="Welcome to Your Vue.js App"/> -->
-  <Props msg="Welcome to Your Vue.js App" :data="[1,2,3]"/>
+  <!-- <Props msg="Welcome to Your Vue.js App" :data="[1,2,3]"/> -->
+  <EmitParent msg="Welcome to Your Vue.js App"/>
 
 </template>
 
@@ -15,7 +16,8 @@
 // import Reactive from './components/Reactive.vue'
 // import Computed from './components/Computed.vue'
 // import Watch from './components/Watch.vue'
-import Props from './components/Props.vue'
+// import Props from './components/Props.vue'
+import EmitParent from './components/EmitParent.vue'
 </script>
 
 <style>
