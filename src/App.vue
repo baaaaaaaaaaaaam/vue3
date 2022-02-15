@@ -1,13 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <!-- <LifeCycle msg="Welcome to Your Vue.js App"/> -->
   <!-- <Vmodel msg="Welcome to Your Vue.js App"/> -->
   <!-- <Reactive msg="Welcome to Your Vue.js App"/> -->
   <!-- <Computed msg="Welcome to Your Vue.js App"/> -->
   <!-- <Watch msg="Welcome to Your Vue.js App"/> -->
   <!-- <Props msg="Welcome to Your Vue.js App" :data="[1,2,3]"/> -->
-  <EmitParent msg="Welcome to Your Vue.js App"/>
-
+  <!-- <EmitParent msg="Welcome to Your Vue.js App"/> -->
+  <Ex1/>
 </template>
 
 <script setup>
@@ -17,7 +17,8 @@
 // import Computed from './components/Computed.vue'
 // import Watch from './components/Watch.vue'
 // import Props from './components/Props.vue'
-import EmitParent from './components/EmitParent.vue'
+// import EmitParent from './components/EmitParent.vue'
+import Ex1 from './components/Practice/Ex3-5-1.vue'
 </script>
 
 <style>
