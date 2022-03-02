@@ -1,57 +1,41 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <LifeCycle msg="Welcome to Your Vue.js App"/> -->
-  <!-- <Vmodel msg="Welcome to Your Vue.js App"/> -->
-  <!-- <Reactive msg="Welcome to Your Vue.js App"/> -->
-  <!-- <Computed msg="Welcome to Your Vue.js App"/> -->
-  <!-- <Watch msg="Welcome to Your Vue.js App"/> -->
-  <!-- <Props msg="Welcome to Your Vue.js App" :data="[1,2,3]"/> -->
-  <!-- <EmitParent msg="Welcome to Your Vue.js App"/> -->
-  <!-- <Ex1/> -->
-  <!-- <MyButton sm> MyButton Test </MyButton>
-  <MyButton lg> MyButton Test </MyButton>
-  <MyButton pill> MyButton Test </MyButton>
-  <MyButton background-white pill> MyButton Test </MyButton> -->
-  <MyButton type="switch" v-model:active="active"> MyButton Test </MyButton>
-  <!-- <MyButton type="switch" sep="2" v-model:active="active" @click="onClicked"> MyButton Test </MyButton> -->
+  <header>
+    <hgroup class="my-5">
+      <h1>나의 할일</h1>
+      <em>{{today}}</em>
+    </hgroup>
+  </header>
+  <TodoListContainer/>
 </template>
 
 <script>
-// import LifeCycle from './components/LifeCycle.vue'
-// import Vmodel from './components/Vmodel.vue'
-// import Reactive from './components/Reactive.vue'
-// import Computed from './components/Computed.vue'
-// import Watch from './components/Watch.vue'
-// import Props from './components/Props.vue'
-// import EmitParent from './components/EmitParent.vue'
-// import Ex1 from './components/Practice/Ex3-5-1.vue'
-import {ref, watch} from 'vue'
-import MyButton from './components/Practice/Ex3-5-2.vue'
+import { inject  } from 'vue'
+import TodoListContainer from './components/TodoListContainer.vue'
+
 
 export default {
   components:{
-    MyButton
+    TodoListContainer
   },
+  name:'App',
   setup(){
-    const active=ref(true)
-    watch(active,()=>{
-      console.log(active.value)
-    })
-    return {
-      active,
+    const today = inject('today');
+
+    return{
+      today
     }
   }
 }
 
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+
+hgroup {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Arial Bold';
+}
+hgroup h1 {
+  font-weight: bolder;
 }
 </style>
